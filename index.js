@@ -12,3 +12,30 @@ const quotes = [
   'There is little success where there is little laughter.',
   'We cannot solve our problems with the same thinking we used when we created them.'
 ];
+
+// Generate random quote 
+
+const quotesDiv = document.querySelector('#quotesDiv');
+const button = document.querySelector('button');
+
+function generateQuote() {
+  let quoteNumber = Math.floor(Math.random() * quotes.length);
+  //console.log(quoteNumber);
+  quotesDiv.textContent = quotes[quoteNumber];
+
+
+};
+
+
+// Create an event to display random quote when clicking the button or loading the page
+
+
+button.addEventListener('click', generateQuote);
+window.addEventListener('load', generateQuote)
+
+
+
+
+
+
+
